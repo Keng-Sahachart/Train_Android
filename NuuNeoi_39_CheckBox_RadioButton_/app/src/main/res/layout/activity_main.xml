@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <EditText
+            android:id="@+id/etvNum1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:inputType="number"
+            android:text="10" />
+
+        <EditText
+            android:id="@+id/etvNum2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:inputType="number"
+            android:text="7" />
+
+        <TextView
+            android:id="@+id/tvRes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="=0" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnCal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/calculator"
+        android:textColor="@color/puple"/>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:text="@string/i_agree" />
+
+    <RadioGroup
+        android:id="@+id/rbgOperator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checkedButton="@+id/rbPlus"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rbPlus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/radio_button_margin_left"
+            android:text="+" />
+
+        <RadioButton
+            android:id="@+id/rbMinus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/radio_button_margin_left"
+            android:text="-" />
+
+        <RadioButton
+            android:id="@+id/rbMultiply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/radio_button_margin_left"
+            android:text="*" />
+
+        <RadioButton
+            android:id="@+id/rbDivide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/radio_button_margin_left"
+            android:text="/" />
+
+    </RadioGroup>
+
+<!--    style="@android:style/Widget.ProgressBar.Large"-->
+<!--    style="@android:style/Widget.Holo.ProgressBar.Large"-->
+<!--    Material มีตั้งแต่ API LV21-->
+<!--    style="@android:style/Widget.Holo.ProgressBar.Large"-->
+
+<!--    style="@android:style/Widget.Holo.ProgressBar.Horizontal"-->
+    <ProgressBar
+        style="@style/ProgressBarStyle"
+        android:indeterminate="true"
+        android:progress="100"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:src="@drawable/ic_launcher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <ImageView
+        android:src="@mipmap/ic_launcher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

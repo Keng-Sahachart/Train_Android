@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+ให้ลูกเรียงเป็น แนนตั้ง
+เป็นลูกของ linear Layout
+android:orientation="vertical"
+
+กำหนด จำนวน ส่วน ของ view ที่จะแสดงผล ถ้า น้อยกว่า ก็จะเหลือพื้นที่
+ หรือ เกิน ก็จะแสดง เท่าที่มันกำหนด
+android:weightSum="5"
+
+สัดส่วน หรือ ความกว้าง สูง จะแสดงผล เฉลี่ย ของมันเอง
+จะหักลบ dp ก่อน แล้ว ค่อย เฉลี่ยตามจำนวน weight
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    >
+<!--
+android:layout_width="match_parent" ให้กว้างเท่าแม่
+android:layout_width="wrap_content" ความกว้าง เท่า ข้อมูลในตัวเอง
+
+สี backgroud
+android:background="#ffaaaa"
+
+android:layout_height="0dp" ไม่สนความสูงของแม่ ต้องมาคู่กับ
+android:layout_weight="1" ใส่คู่กันกับ 0dp ให้คิดเป็น 1 ส่่วน เท่ากันกัน เฉลี่ยกับ ลูกอื่นๆ
+กระจายพื้นที่ที่เหลือ
+    -->
+    <TextView
+        android:id="@+id/tv01"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:background="#ffaaaa"
+        android:text="Hello Fucking World!!!!!" />
+
+    <!---->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_gravity="right"
+        android:background="#aaffaa"
+        android:text="Hello Fucking World!!!!!" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#aaaaff"
+        android:text="Hello Fucking World!!!!!" />
+
+</LinearLayout>
