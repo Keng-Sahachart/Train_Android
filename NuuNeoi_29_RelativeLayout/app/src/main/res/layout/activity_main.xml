@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <!--
+    &lt;!&ndash;    Mode ที่ วิว อิงกับ Relative Layout&ndash;&gt;
+    &lt;!&ndash;red&ndash;&gt;
+        <View
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="#ff0000" />
+    &lt;!&ndash;yellow&ndash;&gt;
+        <View
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="#ffff00"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            />
+    &lt;!&ndash;    blue&ndash;&gt;
+        <View
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="#0000ff"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            />
+    -->
+
+    <!--**************************************************-->
+    <!--**************************************************-->
+    <!--    ลูกแต่ละตัว อิง ตำแหน่ง กันเอง-->
+
+    <View
+        android:id="@+id/vRed"
+android:layout_marginLeft="100dp"
+        android:layout_marginTop="100dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="#ff0000" />
+
+    <View
+        android:id="@+id/vYellow"
+        android:layout_toRightOf="@id/vRed"
+android:layout_alignTop="@id/vRed"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="#ffff00" />
+
+<!--
+android:layout_toRightOf="@id/vRed"
+ผล เท่ากับ
+android:layout_alignLeft="@id/vYellow"
+-->
+    <View
+        android:layout_below="@id/vYellow"
+        android:layout_alignLeft="@id/vYellow"
+
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="#0000ff" />
+
+</RelativeLayout>
