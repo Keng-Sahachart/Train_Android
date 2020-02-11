@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">FlashLightV1</string>
+    <string name="red_button">R</string>
+    <string name="blue_button">B</string>
+    <string name="white_button">W</string>
+    <string name="gray_button">G</string>
+    <string name="yellow_button">Y</string>
+</resources>
