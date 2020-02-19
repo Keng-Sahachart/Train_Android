@@ -10,10 +10,14 @@ import android.widget.RelativeLayout;
 import static java.lang.Thread.*;
 import android.content.Intent;
 
+import android.preference.PreferenceManager;
+
 public class MainActivity extends AppCompatActivity {
 
     public RelativeLayout Rl;
 
+    private boolean on = false;
+    private boolean noFlash = false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,11 +50,6 @@ public class MainActivity extends AppCompatActivity {
 
         long mSec = 1000;
         Rl.setBackgroundColor(Color.BLUE);
-
-        Intent refresh = new Intent(this, Main.class);
-        startActivity(refresh);//Start the same Activity
-        finish(); //finish Activity.
-
         Delay(mSec);
         Rl.setBackgroundColor(Color.RED);
         Delay(mSec);
@@ -60,13 +59,27 @@ public class MainActivity extends AppCompatActivity {
         Delay(mSec);
         Rl.setBackgroundColor(Color.YELLOW);
         Delay(mSec);
+
     }
 
     void Delay(long milsec){
         try {
             sleep(milsec);
+
         } catch (InterruptedException e) {
            //e.printStackTrace();
+        }
+    }
+
+    private void updateStatus() {
+        on = PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).getBoolean(LightService.SERVICE_RUNNING, false);
+    }
+
+    private void updateBackground() {
+        if (on) {
+            mImageButton.setBackgroundResource(R.drawable.img_background_on);
+        } else {
+            mImageButton.setBackgroundResource(R.drawable.img_background_off);
         }
     }
 }

@@ -104,17 +104,18 @@ public class MainActivity extends AppCompatActivity {
             //Logcat ออก Assert
             Log.wtf("Calculation wtf => ", "What a terrible failure ,Huhhh");
 
+            // lesson 60
+            // Get Windows Size
             Display display = getWindowManager().getDefaultDisplay();
             Point size = new Point();
             display.getSize(size);
             int width = size.x;
             int Height = size.y;
 
-
-            // จะมี Popup เล็กขึ้นมา
+            //Toast จะมี Popup เล็กขึ้นมา
             Toast.makeText(MainActivity.this,
                     "width => " + width + " / height =>" + Height ,
-                    Toast.LENGTH_LONG) //Short  3 sec , Long 5 Sec
+                    Toast.LENGTH_LONG) //Short  3  sec , Long 5 Sec
                     .show(); // ต้อง .Show ด้วย
 
         }
