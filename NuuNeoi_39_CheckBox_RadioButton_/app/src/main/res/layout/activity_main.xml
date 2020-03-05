@@ -10,8 +10,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:fillViewport="true"
-        >
+        android:fillViewport="true">
 
         <!--        // Layout For ScrollView-->
         <LinearLayout
@@ -119,6 +118,16 @@
                 android:indeterminate="true"
                 android:progress="100" />
 
+            <com.example.nuuneoi_39_checkbox_radiobutton.CustomView
+                android:layout_width="match_parent"
+                android:layout_height="160dp"/>
+
+            <com.example.nuuneoi_39_checkbox_radiobutton.CustomView
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                app:isBlue="true"/>
+<!--            isBlue ไปสร้าง attr-->
+<!--            ส่งไปที่ java -->
             <View
                 android:layout_width="match_parent"
                 android:layout_height="0dp"

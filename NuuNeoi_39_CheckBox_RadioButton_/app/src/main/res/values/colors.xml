@@ -4,4 +4,6 @@
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
     <color name="puple">#ff00ff</color>
+    <color name="BtnOrangeNormal">#d65317</color>
+    <color name="BtnOrangePressed">#ae3600</color>
 </resources>
