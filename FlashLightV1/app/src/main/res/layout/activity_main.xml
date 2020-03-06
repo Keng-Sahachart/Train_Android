@@ -18,8 +18,9 @@
             android:layout_width="60sp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="@string/blue_button"
-            android:onClick="onClick1" />
+            android:onClick="onClick1"
+            android:text="@string/blue_button" />
+
         <Button
             android:id="@+id/button2"
             android:layout_width="60sp"
